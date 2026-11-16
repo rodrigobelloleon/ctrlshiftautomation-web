@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useState } from 'react'                                          //BLOQUE 1   - Funcion useStatye de la bilioteca React , en esta aplicacion funciona como un hook que permite recordar cuantas veces le das clic 
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
-import './App.css'
+import './App.css'                                                        //Se importa un CSS que tiene las reglas para el estilo 
 
-function App() {
-  const [count, setCount] = useState(0)
+function App() {                                                          //BLOQUE 2    - esta es una funcion App comienza en mayuscula y devuelve elementos JSX que react usa para representar la interfaz                       //BLOQUE 2                   
+  //Codigo del componente
+  const [pendingServices, setPendingServices] = useState(0) // Esta linea es para el contador que tiene la pagina, 
 
-  return (
+  return (                                                                                        //Bloque 3
+    //interfaz del componente
     <>
       <section id="center">
         <div className="hero">
@@ -16,7 +18,8 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>El mundo de Josbelink </h1>
+          <p>Technical Services Management Platform</p>
           <p>
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
@@ -24,9 +27,9 @@ function App() {
         <button
           type="button"
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={() => setPendingServices(previous => previous + 1)}
         >
-          Count is {count}
+          Pending Services: {pendingServices}
         </button>
       </section>
 
@@ -119,4 +122,4 @@ function App() {
   )
 }
 
-export default App
+export default App                                                                                  // Bloque 4
